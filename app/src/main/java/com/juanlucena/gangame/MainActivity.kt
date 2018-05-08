@@ -2,9 +2,7 @@ package com.juanlucena.gangame
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.support.design.widget.BottomNavigationView
 import android.support.v4.app.Fragment
-import android.view.MenuItem
 import com.juanlucena.gangame.deals.DealsFragment
 import com.juanlucena.gangame.owned.TopOwnedFragment
 import com.juanlucena.gangame.rated.TopRatedFragment

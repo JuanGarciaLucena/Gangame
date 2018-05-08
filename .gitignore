@@ -13,3 +13,6 @@
 .idea/modules.xml
 .idea/runConfigurations.xml
 .idea/vcs.xml
+.idea/sonarlint/issuestore/index.pb
+.idea/codeStyles/Project.xml
+.idea/caches/build_file_checksums.ser

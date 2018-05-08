@@ -12,21 +12,21 @@ import com.juanlucena.gangame.TopGame
 /**
  * Created by juanantonio.garcia on 03/05/2018.
  */
-class MostOwnedFragment : BaseListFragment(){
+class TopOwnedFragment : BaseListFragment(){
 
     override fun getAdapter(): RecyclerView.Adapter<*> {
         return DataBindingRecyclerAdapter<TopGame>(BR.topGame, R.layout.item_top_game)
     }
 
-    override fun onViewCreated(view: View?, savedInstanceState: Bundle?) {
+    override fun getLayoutResId(): Int {
+        return R.layout.fragment_top_owned
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
         //Casting con la palabra reservada as
         (listAdapter as DataBindingRecyclerAdapter<TopGame>).items.addAll(getDummyTopGame())
-    }
-
-    override fun getLayoutResId(): Int {
-        return R.layout.fragment_top_owned
     }
 
     fun getDummyTopGame() : ArrayList<TopGame>{
