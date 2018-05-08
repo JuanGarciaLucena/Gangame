@@ -3,4 +3,6 @@
     package="com.juanlucena.common">
 
     <uses-permission android:name="android.permission.INTERNET"/>
+
+    
 </manifest>
