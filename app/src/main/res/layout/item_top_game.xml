@@ -30,6 +30,7 @@
                 android:layout_marginEnd="8dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
+                app:imageUrl="@{topGame.thumb}"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintDimensionRatio="1:0.5"
                 app:layout_constraintEnd_toStartOf="@+id/guideline"
@@ -71,7 +72,7 @@
                 android:textColor="@color/blue_gray"
                 android:textSize="14sp"
                 android:textStyle="bold"
-                android:text="@{topGame.steamRating}"
+                android:text="@{String.valueOf(topGame.steamRating)}"
                 app:layout_constraintStart_toStartOf="@+id/labelPublisher"
                 app:layout_constraintTop_toBottomOf="@+id/labelPublisher"
                 tools:text="50" />

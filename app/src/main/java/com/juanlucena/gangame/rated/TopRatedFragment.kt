@@ -23,10 +23,7 @@ class TopRatedFragment : BaseListFragment(){
 
         //Casting con la palabra reservada as
         (listAdapter as DataBindingRecyclerAdapter<TopGame>).items.addAll(getDummyTopGame())
-    }
-
-    override fun getLayoutResId(): Int {
-        return R.layout.fragment_top_rated
+        listAdapter.notifyDataSetChanged()
     }
 
     fun getDummyTopGame() : ArrayList<TopGame>{

@@ -18,15 +18,12 @@ class TopOwnedFragment : BaseListFragment(){
         return DataBindingRecyclerAdapter<TopGame>(BR.topGame, R.layout.item_top_game)
     }
 
-    override fun getLayoutResId(): Int {
-        return R.layout.fragment_top_owned
-    }
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
         //Casting con la palabra reservada as
         (listAdapter as DataBindingRecyclerAdapter<TopGame>).items.addAll(getDummyTopGame())
+        listAdapter.notifyDataSetChanged()
     }
 
     fun getDummyTopGame() : ArrayList<TopGame>{

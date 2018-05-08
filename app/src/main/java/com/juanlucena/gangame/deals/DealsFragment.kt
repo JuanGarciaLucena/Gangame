@@ -18,15 +18,12 @@ class DealsFragment : BaseListFragment(){
         return DataBindingRecyclerAdapter<Deal>(BR.deal, R.layout.item_deal)
     }
 
-    override fun onViewCreated(view: View?, savedInstanceState: Bundle?) {
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
         //Casting con la palabra reservada as
         (listAdapter as DataBindingRecyclerAdapter<Deal>).items.addAll(getDummyDeals())
-    }
-
-    override fun getLayoutResId(): Int {
-        return R.layout.fragment_deals
+        listAdapter.notifyDataSetChanged()
     }
 
     fun getDummyDeals() : ArrayList<Deal>{
