@@ -11,7 +11,8 @@ data class Deal(var title : String,
                 var salePrice : Float,
                 var normalPrice : Float,
                 var metacriticScore : Int,
-                @SerializedName("steamRatingPercent") var steamRating : Int)
+                @SerializedName("steamRatingPercent") var steamRating : Int,
+                val thumb : String)
 
 data class TopGame(@SerializedName("name") var title : String,
                    var publisher : String,

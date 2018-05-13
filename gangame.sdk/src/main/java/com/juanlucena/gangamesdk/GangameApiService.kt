@@ -2,6 +2,7 @@ package com.juanlucena.gangamesdk
 
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
+import com.juanlucena.gangamesdk.serializer.TopGameDeserializer
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
@@ -13,6 +14,11 @@ class GangameApiService {
     val apiClient : RetrofitGangameApi
 
     init {
+
+        val gson = GsonBuilder()
+                .registerTypeAdapter(TopGame :: class.java, TopGameDeserializer())
+                .create()
+
         val apiClientConfig =
                 Retrofit.Builder()
                 .baseUrl(Routes.BASE_URL)
